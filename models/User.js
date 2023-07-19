@@ -10,31 +10,34 @@ class User extends Model {
 
 User.init(
   {
-    id: {
+    user_id:{
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    name: {
+      allowNull:false
+  },
+  first_name:{
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    email: {
+      defaultValue: 'John'
+  },
+  last_name:{
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
+      defaultValue: 'Doe'
+  },
+  e_mail:{
       type: DataTypes.STRING,
+      allowNull: false
+  },
+  password: {
+      type: DataTypes.STRING,
+      defaultValue: 'bruh',
       allowNull: false,
-      validate: {
-        len: [8],
-      },
     },
+  Playlist_Name:{
+      type: DataTypes.STRING,
+  }
   },
   {
     hooks: {
