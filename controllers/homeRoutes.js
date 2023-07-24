@@ -79,6 +79,14 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/signup', (req, res) => {
+  res.render('signup'); // Render the "signup.handlebars" template
+});
+
+router.get('/homepage', (req, res) => {
+  res.render('homepage'); // Render the "homepage.handlebars" template
+});
+
 router.get('/songs', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -96,5 +104,6 @@ router.get('/songs', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 })
+
 
 module.exports = router;
