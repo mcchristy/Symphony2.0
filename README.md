@@ -9,6 +9,7 @@
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
+<<<<<<< Updated upstream
 
   
 ## Installation
@@ -22,6 +23,18 @@ Once all the required dependencies are installed run the command node index.js t
 
 ## License
 This application is covered under the None license.
+=======
+  - [Questions](#questions)
+  
+ ## Installation
+  First you must clone the git repository to your local machine, and then you must install the required dependencies using "npm install" and then run the application using "node index.js"
+  
+## Usage
+  
+  
+## License
+  This application is covered under the None license.
+>>>>>>> Stashed changes
   
 ## Contributing
   Mary Christy, Florin Alexe, Ewomanzino Ebiala, Steven Arroyave
@@ -29,4 +42,17 @@ This application is covered under the None license.
  ## Tests
   To run tests simpily navigate to the project directory and run "npm test".
   
+<<<<<<< Updated upstream
 
+=======
+## Questions
+  For additional questions, please contact our team:
+  GitHub: [mcchristy](https://github.com/mcchristy)
+  Email: mcchristy10@yahoo.com
+  Github: [DavidEbiala] (https://github.com/DavidEbiala)
+  Email: eebia002@fiu.edu
+  Github: [alexeflorin] (https://github.com/alexeflorin)
+  Email: goremic@yahoo.com
+  Github: [stevenaroyave8] (https://github.com/stevenarroyave8) 
+  Email: stevenarroyave8@gmail.com
+>>>>>>> Stashed changes

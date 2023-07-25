@@ -1,19 +1,35 @@
 const express = require('express');
 const router = express.Router();
 const Playlist = require('../../models/Playlist');
+const request = require('request');
 
-// Get all playlists
-router.get('/', async (req, res) => {
-  try {
-    const playlists = await Playlist.findAll();
-    res.json(playlists);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'An error occurred' });
+const options = {
+  method: 'GET',
+  url: 'https://spotify23.p.rapidapi.com/playlist/',
+  qs: {
+    id: '37i9dQZF1DX4Wsb4d7NKfP'
+  },
+  headers: {
+    'X-RapidAPI-Key': 'fd75b6ebcdmsh74eb35fdb1b682dp1d5d8cjsnc2dd30198331',
+    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
   }
+};
+
+router.get('/', async (req, res) => {
+  // try {
+  //   const playlists = await Playlist.findAll();
+  //   res.json(playlists);
+  // } catch (error) {
+  //   console.error(error);
+  //   res.status(500).json({ message: 'An error occurred' });
+  // }
+  request(options, function (error, response, body) {
+    if (error) throw new Error(error);
+  
+    res.json(body);
+  });
 });
 
-// Get a single playlist by ID
 router.get('/:id', async (req, res) => {
   try {
     const playlist = await Playlist.findByPk(req.params.id);
@@ -28,7 +44,6 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create a new playlist
 router.post('/', async (req, res) => {
   try {
     const { title, song } = req.body;
@@ -38,6 +53,12 @@ router.post('/', async (req, res) => {
     console.error(error);
     res.status(500).json({ message: 'An error occurred' });
   }
+});
+
+request(options, function (error, response, body) {
+	if (error) throw new Error(error);
+
+	console.log(body);
 });
 
 module.exports = router;
