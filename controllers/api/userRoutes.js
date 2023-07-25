@@ -3,7 +3,7 @@ const {User} = require('../../models/User');
 
 
 router.get('/', async (req, res) => {
-    // Get all user from the user table
+    
     try{
         const userData = await User.findAll();
         res.json(userData);
@@ -14,8 +14,6 @@ router.get('/', async (req, res) => {
   });
 
   
-
-// Create a User
 router.post('/', async (req, res) => {
     try {
       const userData = await User.create(req.body);
@@ -31,8 +29,6 @@ router.post('/', async (req, res) => {
     }
   });
 
-
-// Login
   router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ where: { email: req.body.email } });
@@ -65,8 +61,6 @@ router.post('/', async (req, res) => {
     }
   });
   
-
-//   Logout
   router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       req.session.destroy(() => {
@@ -77,8 +71,6 @@ router.post('/', async (req, res) => {
     }
   });
 
-
-// CREATE multiple users
 router.post('/seed', (req, res) => {
     User.bulkCreate([
         {
