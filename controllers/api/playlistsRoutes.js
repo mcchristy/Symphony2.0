@@ -7,12 +7,12 @@ const options = {
   method: 'GET',
   url: 'https://spotify23.p.rapidapi.com/playlist/',
   qs: {
-    id: '37i9dQZF1DX4Wsb4d7NKfP'
+    id: '37i9dQZF1DX4Wsb4d7NKfP',
   },
   headers: {
     'X-RapidAPI-Key': 'fd75b6ebcdmsh74eb35fdb1b682dp1d5d8cjsnc2dd30198331',
-    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-  }
+    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
+  },
 };
 
 router.get('/', async (req, res) => {
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   // }
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
-  
+
     res.json(body);
   });
 });
@@ -55,10 +55,10 @@ router.post('/', async (req, res) => {
   }
 });
 
-request(options, function (error, response, body) {
-	if (error) throw new Error(error);
+// request(options, function (error, response, body) {
+// 	if (error) throw new Error(error);
 
-	console.log(body);
-});
+// 	console.log(body);
+// });
 
 module.exports = router;

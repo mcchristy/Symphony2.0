@@ -7,12 +7,12 @@ const options = {
   method: 'GET',
   url: 'https://spotify23.p.rapidapi.com/tracks/',
   qs: {
-    ids: '4WNcduiCmDNfmTEz7JvmLv'
+    ids: '4WNcduiCmDNfmTEz7JvmLv',
   },
   headers: {
     'X-RapidAPI-Key': 'fd75b6ebcdmsh74eb35fdb1b682dp1d5d8cjsnc2dd30198331',
-    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-  }
+    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
+  },
 };
 
 // Get all songs
@@ -41,10 +41,11 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-    request(options, function (error, response, body) {
-      if (error) throw new Error(error);
-    
-      console.log(body);
-    });
+request(options, async function (error, response, body) {
+  if (error) throw new Error(error);
+
+
+  console.log('this is the data from the the API', body);
+});
 
 module.exports = router;

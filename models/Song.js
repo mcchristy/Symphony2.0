@@ -14,13 +14,6 @@ Song.init(
         is_favorited:{
             type: DataTypes.BOOLEAN,
         },
-        playlist_id:{
-            type: DataTypes.INTEGER,
-            references:{
-                model:'playlist',
-                key: 'id'
-            }
-        }
     },
     {
         sequelize,
