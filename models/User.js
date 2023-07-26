@@ -10,7 +10,7 @@ class User extends Model {
 
 User.init(
   {
-    user_id:{
+    id:{
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -19,12 +19,10 @@ User.init(
   first_name:{
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: 'John'
   },
   last_name:{
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: 'Doe'
   },
   e_mail:{
       type: DataTypes.STRING,
@@ -32,7 +30,6 @@ User.init(
   },
   password: {
       type: DataTypes.STRING,
-      defaultValue: 'bruh',
       allowNull: false,
     },
   Playlist_Name:{

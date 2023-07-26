@@ -1,14 +1,17 @@
-      <form>
+      <form class="login-form">
         <div class="loginlabel">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Username" name="email" id="email"required>
       
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" name="psw" id="password" required>
       
-          <button type="button" class="btn btn-primary btn-lg">LOGIN</button>
+          <button type="submit" class="btn btn-primary btn-lg">LOGIN</button>
         </div>
         <div class="container">
           <h2>Don't have an account yet? <a href="/signup">Sign up!</a></h2>
         </div>
       </form>
+
+
+      <script src="/js/login.js"></script>
