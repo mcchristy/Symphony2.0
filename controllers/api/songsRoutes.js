@@ -17,13 +17,18 @@ const options = {
 
 // Get all songs
 router.get('/', async (req, res) => {
-  try {
-    const songs = await Song.findAll();
-    res.json(songs);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'An error occurred' });
-  }
+  // try {
+  //   const songs = await Song.findAll();
+  //   res.json(songs);
+  // } catch (error) {
+  //   console.error(error);
+  //   res.status(500).json({ message: 'An error occurred' });
+  // }
+  request(options, function (error, response, body) {
+    if (error) throw new Error(error);
+  
+    console.log(body);
+  });
 });
 
 // Get a single song by ID
@@ -41,11 +46,5 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-request(options, async function (error, response, body) {
-  if (error) throw new Error(error);
-
-
-  console.log('this is the data from the the API', body);
-});
 
 module.exports = router;
