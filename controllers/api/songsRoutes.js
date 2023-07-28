@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
     if (error) throw new Error(error);
   
     console.log(body);
-  });
+  }); 
 });
 
 // Get a single song by ID
