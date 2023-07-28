@@ -42,17 +42,5 @@ This application is covered under the None license.
  ## Tests
   To run tests simpily navigate to the project directory and run "npm test".
   
-<<<<<<< Updated upstream
-
-=======
-## Questions
-  For additional questions, please contact our team:
-  GitHub: [mcchristy](https://github.com/mcchristy)
-  Email: mcchristy10@yahoo.com
-  Github: [DavidEbiala] (https://github.com/DavidEbiala)
-  Email: eebia002@fiu.edu
-  Github: [alexeflorin] (https://github.com/alexeflorin)
-  Email: goremic@yahoo.com
-  Github: [stevenaroyave8] (https://github.com/stevenarroyave8) 
-  Email: stevenarroyave8@gmail.com
->>>>>>> Stashed changes
+  ## Heroku Link Development
+  Link: https://afternoon-beyond-90950-bfb89a24e69c.herokuapp.com/
