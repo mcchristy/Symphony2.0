@@ -55,8 +55,7 @@ color: indigo;
 	padding: 5px;
 }
 
-.login-form,
-.signupForm {
+.login-form {
 	width: 100%;
 	max-width: 400px; 
 	margin: 0;
@@ -72,4 +71,11 @@ color: indigo;
 	text-transform: uppercase;
   }
 
+  #signupForm {
+		width: 100%;
+	max-width: 400px; 
+	margin: 0;
+	padding: 30px;
+	box-shadow: 0 2px 4px;
+  }
 
